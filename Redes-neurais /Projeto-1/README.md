@@ -22,3 +22,17 @@ Exemplo de um comentário a favor.
 
 > 	link do dataset: [Link]( https://raw.githubusercontent.com/natorjunior/debates-ideologicos/main/dataset.csv)
 
+
+## 🎯 Métodos iniciais para trabalho com o dataset de análise de sentimentos 
+- Bag Of Worlds
+  - descricao... 
+- TF-IDF
+  - descricao... 
+
+## 👽 Principais ferramentas para PLN
+- NLTC
+  - descricao...   
+- Spacy
+  - descricao... 
+- Sklearn
+  - descricao... 
