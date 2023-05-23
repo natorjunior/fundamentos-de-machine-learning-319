@@ -14,6 +14,8 @@
 O conjunto de dados é organizado em 3 pastas (train, test, val) e contém subpastas para cada categoria de imagem (Pneumonia/Normal). São 5.863 imagens de Raios X (JPEG) e 2 categorias (Pneumonia/Normal).
 
 Imagens de radiografia de tórax (anterior-posterior) foram selecionadas de coortes retrospectivas de pacientes pediátricos de um a cinco anos de idade do Guangzhou Women and Children's Medical Center, Guangzhou. Todas as radiografias de tórax foram realizadas como parte dos cuidados clínicos de rotina dos pacientes.
+![alt text](https://raw.githubusercontent.com/natorjunior/turma-319/main/Redes-neurais%20/material-de-apoio/xray.png)
+
 
 > link do dataset: 
 	https://data.mendeley.com/datasets/rscbjbr9sj/2
