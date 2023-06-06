@@ -1,0 +1,7 @@
+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
+
+https://github.com/natorjunior/turma-319.git
+
+git clone https://github.com/natorjunior/turma-319.git # copia o repositorio do github
+
+git checkout -b <nome> # cria branch
