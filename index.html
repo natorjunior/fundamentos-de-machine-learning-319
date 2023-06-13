@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>inicial</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h2 id="conectando-com-terminal-do-bash">Conectando com terminal do bash</h2>
+<p>passos:</p>
+<ol>
+<li>
+<ol>
+<li>Acesse o site do GitHub (<a href="https://github.com/">https://github.com/</a>) e faça login na sua conta.;</li>
+</ol>
+</li>
+<li>Vá  no canto superior direito e clique na sua foto de perfil;<br>
+<img src="https://raw.githubusercontent.com/natorjunior/turma-319/main/Redes-neurais/material-de-apoio/img-1.png" alt="img1" width="100%"></li>
+<li>Clique em settings;<br>
+<img src="https://raw.githubusercontent.com/natorjunior/turma-319/main/Redes-neurais/material-de-apoio/img-2.png" width="50%"></li>
+<li>No menu lateral esquerdo, clique em “Developer settings” (Configurações de desenvolvedor);<br>
+<img src="https://raw.githubusercontent.com/natorjunior/turma-319/main/Redes-neurais/material-de-apoio/img-3.png" width="50%"></li>
+<li>Logo em seguida clique em token classic;<br>
+<img src="https://raw.githubusercontent.com/natorjunior/turma-319/main/Redes-neurais/material-de-apoio/img-4.png" alt="img1"></li>
+<li>Clique em gerar um novo token clássico ;<br>
+<img src="https://raw.githubusercontent.com/natorjunior/turma-319/main/Redes-neurais/material-de-apoio/img-5.png" alt="img1"></li>
+<li>Digite um nome e selecione a opção repo;<br>
+<img src="https://raw.githubusercontent.com/natorjunior/turma-319/main/Redes-neurais/material-de-apoio/img-6.png" alt="img1"></li>
+<li>por fim, clique no botão gerar token;<br>
+<img src="https://raw.githubusercontent.com/natorjunior/turma-319/main/Redes-neurais/material-de-apoio/img-7.png" alt="img1"></li>
+</ol>
+<h2 id="baixando-o-repositório">baixando o repositório</h2>
+<ol>
+<li>Em seu máquina, abra o git bash;</li>
+<li>Vá até o diretório em que você deseja salvar o repositório;</li>
+</ol>
+<pre class=" language-bash"><code class="prism  language-bash"> /user/desktop<span class="token operator">&gt;</span> <span class="token function">git</span> clone https://github.com/natorjunior/turma-319.git
+</code></pre>
+<ol start="3">
+<li>Em seguida, vá até o diretório;</li>
+</ol>
+<pre class=" language-bash"><code class="prism  language-bash"> /user/desktop<span class="token operator">&gt;</span> <span class="token function">cd</span> turma-319
+ /user/desktop/turma-319<span class="token operator">&gt;</span>
+</code></pre>
+<h2 id="criando-uma-ramificação-de-trabalho">Criando uma ramificação de trabalho</h2>
+<p>Em Git, uma ramificação (ou branch) é uma linha de desenvolvimento independente que permite que você trabalhe em um conjunto de alterações sem afetar o código principal.<br>
+<img src="https://www.zup.com.br/wp-content/uploads/2021/05/GitHub-Flow-1-1024x541.png" width="100%"></p>
+<p>Cria uma branch e já muda para a mesma.</p>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">git</span> checkout -b develop/natorjunior
+</code></pre>
+<blockquote>
+<p>Agora é a hora de fazer as suas alterações.</p>
+</blockquote>
+<p>Em seguida, você pode usar o comando git status para verificar as mudanças feitas localmente.</p>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">git</span> status
+</code></pre>
+<p>Logo em seguida voce pode adicionar os arquivos que voce modificou, para em seguida fazer o commit;</p>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">git</span> add diretorio_teste/meu_programa.py
+<span class="token function">git</span> add diretorio_teste/plotly_dash.py
+<span class="token function">git</span> add diretorio_teste/config.py
+</code></pre>
+<blockquote>
+<p>Agora vamos fazer o <em>commit</em>  dos arquivos alterados.</p>
+</blockquote>
+<p>Faça o commit das alterações e inclua uma mensagem;</p>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">git</span> commit -m <span class="token string">"Meus primeiros programas"</span> 
+</code></pre>
+<blockquote>
+<p>Pronto, as alterações foram finalizadas, agora é só subir para o github</p>
+</blockquote>
+<p>Faremos o push das alterações.</p>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">git</span> push --set-upstream origin develop/natorjunior
+</code></pre>
+<hr>
+<h2 id="comandos-básicos--do-git">Comandos básicos  do git</h2>
+<p>Clona um repositório remoto existente para o seu computador.</p>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">git</span> clone url-do-repositorio-remoto
+</code></pre>
+<hr>
+<p>Adiciona um arquivo específico ao próximo commit.</p>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">git</span> add <span class="token operator">&lt;</span>arquivo<span class="token operator">&gt;</span>
+</code></pre>
+<hr>
+<p>Registra as alterações adicionadas no repositório com uma mensagem descritiva.</p>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">git</span> commit -m <span class="token string">"mensagem"</span>
+</code></pre>
+<hr>
+<p>Exibe o estado atual do seu repositório, mostrando arquivos modificados, adicionados ou removidos.</p>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">git</span> status
+</code></pre>
+<hr>
+<p>Lista todas as branches existentes no repositório.</p>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">git</span> branch
+</code></pre>
+<hr>
+<p>Muda para a branch especificada.</p>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">git</span> checkout <span class="token operator">&lt;</span>branch<span class="token operator">&gt;</span>
+</code></pre>
+<hr>
+<p>Obtém as últimas alterações de um repositório remoto e as mescla com o seu repositório local.</p>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">git</span> pull
+</code></pre>
+<hr>
+<p>Envia as alterações locais para um repositório remoto.</p>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">git</span> push
+</code></pre>
+<hr>
+<p>Incorpora as alterações da branch especificada à branch atual.</p>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">git</span> merge <span class="token operator">&lt;</span>branch<span class="token operator">&gt;</span>
+</code></pre>
+</div>
+</body>
+
+</html>
