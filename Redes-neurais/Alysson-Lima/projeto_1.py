@@ -21,15 +21,27 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 stop_words = set(stopwords.words('portuguese'))
 
-word_tokens = word_tokenize(df.Text.values[0])
-filtered_sentence = [w for w in word_tokens if not w.lower() in stop_words]
-filtered_sentence = []
-for w in word_tokens:
-    if w not in stop_words:
-        filtered_sentence.append(w)
+stop_words
+
+stop_words.remove('não')
+
+stop_words
+
+def preprocessing(text):
+  word_tokens = word_tokenize(text)
+  filtered_sentence = [w for w in word_tokens if not w.lower() in stop_words]
+  filtered_sentence = []
+  for w in word_tokens:
+      if w not in stop_words:
+          filtered_sentence.append(w)
+  return " ".join(filtered_sentence)
+
+df["tratadas"] = df.Text.apply(preprocessing)
+
+df
 
 from sklearn.feature_extraction.text import CountVectorizer
-docs = df.Text
+docs = df.tratadas
 
 vectorizer = CountVectorizer()
 bow_matrix = vectorizer.fit_transform(docs)
@@ -40,7 +52,7 @@ print(bow_matrix.toarray().shape)
 
 from sklearn.model_selection import train_test_split
 X_treino, X_teste, y_treino, y_teste = train_test_split(bow_matrix.toarray(), df.Label,
-test_size=0.3)
+test_size=0.3,random_state=42)
 
 from sklearn.naive_bayes import GaussianNB
 
